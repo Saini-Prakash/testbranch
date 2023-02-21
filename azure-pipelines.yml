@@ -49,10 +49,10 @@ jobs:
         npm install --global sfdx-cli@latest
       displayName: Install Salesforce CLI
     - bash:
-        echo y | sfdx plugins:install sfdx-git-delta
+        echo 'Y | sfdx plugins:install sfdx-git-delta
       displayName: Install sfdx-git-delta
     - bash:
-      echo 'Y' | sfdx plugins:install sfpowerkit
+        echo 'Y' | sfdx plugins:install sfpowerkit
       displayName: 'Install SfPowerKit'
     - bash: 
         sfdx force:auth:sfdxurl:store -f Authorize -s -a MRAQA
