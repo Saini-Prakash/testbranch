@@ -55,7 +55,7 @@ jobs:
       echo 'Y' | sfdx plugins:install sfpowerkit
       displayName: 'Install SfPowerKit'
     - bash: 
-        sfdx auth:sfdxurl:store -f Authorize -s -a MRAQA
+        sfdx force:auth:sfdxurl:store -f Authorize -s -a MRAQA
       displayName: Authorize Salesforce org
     - bash:
         sfdx sgd:source:delta --to HEAD --from $(COMMIT_ID) --output .
