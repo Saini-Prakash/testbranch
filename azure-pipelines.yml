@@ -31,13 +31,6 @@ jobs:
 - job: Deploy
   pool:
     vmImage: 'ubuntu-latest'
-  variables:
-      isMRAQA: ${{eq(variables['Build.SourceBranch'], 'refs/heads/MRAQA')}}
-      isDTFQA: ${{eq(variables['Build.SourceBranch'], 'refs/heads/DTFQA')}}
-      isSIT: ${{eq(variables['Build.SourceBranch'], 'refs/heads/SIT')}}
-      isUAT: ${{eq(variables['Build.SourceBranch'], 'refs/heads/UAT')}}
-      isMaster: ${{eq(variables['Build.SourceBranch'], 'refs/heads/master')}} 
-
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/MRAQA'))
   variables:
   - group: MRAQA-Validation-Variables
