@@ -1,2 +1,2 @@
-Ignore Package.xml
-package.xml
+#Ignore Package.xml
+Package/package.xml
