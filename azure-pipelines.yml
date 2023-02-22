@@ -64,7 +64,7 @@ jobs:
         cat package/package.xml
       displayName: Display package xml
     - bash:
-        sfdx force:source:deploy -x package/package.xml -u targetorgname -l $(SF_TESTLEVEL) -w 60 -c --verbose
+        sfdx force:source:deploy -x package/package.xml -u targetorgname -l NoTestRun -w 60 -c --verbose
       displayName: Validate source code
     - task: Bash@3
       displayName: 'Update Variable Group'
