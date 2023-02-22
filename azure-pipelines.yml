@@ -58,7 +58,7 @@ jobs:
         sfdx force:auth:sfdxurl:store -f QAOrgAuthURL -s -a $(QA_ORG)
       displayName: Authorize Salesforce org
     - bash:
-        sfdx sgd:source:delta --to HEAD --from HEAD^ --output .
+        sfdx sgd:source:delta --to HEAD --from HEAD^ --output . --ignore .packageignore
       displayName: Get delta
     - bash:
         cat package/package.xml
