@@ -8,6 +8,20 @@
         <value>https://login.salesforce.com/</value>
     </labels>
     <labels>
+        <fullName>password</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>password</shortDescription>
+        <value>Jaipur@#$123</value>
+    </labels>
+    <labels>
+        <fullName>sandboxURL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>sandboxURL</shortDescription>
+        <value>http://test.salesforce.com/</value>
+    </labels>
+    <labels>
         <fullName>username</fullName>
         <language>en_US</language>
         <protected>true</protected>
