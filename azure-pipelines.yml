@@ -7,6 +7,7 @@ trigger:
     include:
       - MRAfeature/US-*
       - DTFfeature/US-*
+      - MRAQA
   paths:
     include:
       - force-app
@@ -20,6 +21,7 @@ pr:
     include:
       - MRAfeature/US-*
       - DTFfeature/US-*
+      - MRAQA
   paths:
     include:
       - force-app
