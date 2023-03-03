@@ -3,7 +3,7 @@
     <fullName>Test_Email12__c</fullName>
     <caseSensitive>true</caseSensitive>
     <externalId>true</externalId>
-    <label>Test Email12</label>
+    <label>Test Email14</label>
     <trackFeedHistory>false</trackFeedHistory
     <type>Email</type>
     <unique>true</unique>
