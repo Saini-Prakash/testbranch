@@ -46,7 +46,7 @@ jobs:
         cat package/package.xml
       displayName: Display package xml
     - bash:
-        sfdx force:source:deploy -c -x package/package.xml -l NoTestRun -w 60 --verbose -u prakash231saini@test.env.com
+        sfdx force:source:deploy --soapdeploy -c -x package/package.xml -l NoTestRun -w 60 --verbose -u prakash231saini@test.env.com
       displayName: Validate source code
     - task: Bash@3
       displayName: 'Update Variable Group'
