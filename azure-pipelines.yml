@@ -5,23 +5,7 @@ trigger:
   batch: "true"
   branches:
     include:
-      - MRAfeature/US-*
-      - DTFfeature/US-*
-      - MRAQA
-  paths:
-    include:
-      - force-app
-    exclude:
-      - README.md
-      - azure-pipelines.yml
-      - Deployment.yml
-pr:
-  autoCancel: "true"
-  branches:
-    include:
-      - MRAfeature/US-*
-      - DTFfeature/US-*
-      - MRAQA
+      - MRAfeature/Sprint-*
   paths:
     include:
       - force-app
@@ -33,7 +17,6 @@ jobs:
 - job: Deploy
   pool:
     vmImage: 'ubuntu-latest'
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/MRAQA'))
   variables:
   - group: MRAQA-Validation-Variables
   steps:
@@ -53,9 +36,6 @@ jobs:
     - bash:
         echo 'y' | sfdx plugins:install sfdx-git-delta
       displayName: Install sfdx-git-delta
-    - bash:
-        echo 'Y' | sfdx plugins:install sfpowerkit
-      displayName: 'Install SfPowerKit'
     - bash: 
         sfdx force:auth:sfdxurl:store -f QAOrgAuthURL -s -a $(QA_ORG)
       displayName: Authorize Salesforce org
@@ -68,9 +48,6 @@ jobs:
     - bash:
         sfdx force:source:deploy -c -x package/package.xml -l NoTestRun -w 60 --verbose -u prakash231saini@test.env.com
       displayName: Validate source code
-    - bash:
-        sfdx force:source:deploy  -x package/package.xml -l NoTestRun -w 60 --verbose -u prakash231saini@test.env.com
-      displayName: Deploy source code
     - task: Bash@3
       displayName: 'Update Variable Group'
       env:
