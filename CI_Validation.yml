@@ -18,6 +18,8 @@ pr:
   branches:
     include:
       - CITEST
+      - MRAfeature/US-*
+      - MRAfeature/Sprint-*
   paths:
     include:
       - force-app
