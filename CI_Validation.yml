@@ -92,7 +92,3 @@ jobs:
           -d "$JSON_STRING" \
           $URLPUT
           echo $URLPUT
-
-
-
-URLPUT='https://dev.azure.com/qualityecosystem/MRA/_apis/distributedtask/variablegroups/{XXXX}?api-version=5.1-preview.1'
