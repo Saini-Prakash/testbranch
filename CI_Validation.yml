@@ -51,7 +51,7 @@ jobs:
         echo 'y' | sfdx plugins:install sfdx-git-delta
       displayName: Install sfdx-git-delta
     - bash: 
-        sfdx force:auth:sfdxurl:store -f AuthURL/QAOrgAuthURL -s -a $(CI_ORG)
+        sfdx force:auth:sfdxurl:store -f QAOrgAuthURL -s -a $(CI_ORG)
       displayName: Authorize Salesforce org
     - bash:
         sfdx sgd:source:delta --to HEAD --from $(CI_COMMIT_ID) --output . --ignore .packageignore
