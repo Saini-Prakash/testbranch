@@ -6,5 +6,5 @@
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>
     <type>LongTextArea</type>
-    <visibleLines>4</visibleLines>
+    <visibleLines>5</visibleLines>
 </CustomField>
